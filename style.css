@@ -1,0 +1,34 @@
+/**
+ * Chrome浏览器body元素自带margin: 8px的外边距
+ * 在position的表现上，pageX跟pageY的值是完全基于浏览器全页面(包括不可视部分，即页面最左上角为(0,0))
+ * layerX跟layerY的值则是基于被点击元素的边界(包括border,padding,不包括margin,即被点击元素的边框左上角为(0,0))
+ * clientX跟clientY的值是基于浏览器可视页面边界(不考虑滚动条是否滚动,即浏览器可视页面左上角为(0,0))
+ * screenX跟screenY的值是基于电脑显示屏幕边界(跟显示屏有关，即显示屏左上角为(0,0))
+ * offsetX跟offsetY的值是基于被点击元素的边框内(不包括border,即被点击元素边框内左上角为(0,0))
+ */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.canvas-wrapper {
+	position: relative;
+	width: 2000px;
+	height: 2000px;
+	background-color: rgba(0, 255, 255, 0.1);
+}
+
+
+#container {
+	position: absolute;
+	top: 250px;
+	left: 50px;
+	margin: 5px;
+	padding: 5px;
+	width: 500px;
+	height: 500px;
+	border: 2px solid rgba(0, 255, 255, 0.5);
+	background-color: rgba(0, 255, 255, 0.2);
+	margin: 0 auto;
+}
